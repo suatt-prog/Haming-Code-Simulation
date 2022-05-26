@@ -10,7 +10,7 @@
         <br/>
         <br/>
         <input type="text" id="girdi">
-        <input type="submit" id="tus" onclick="bas();">
+        <input type="submit" id="tus" onclick="bas();" value="save">
         <script>
             const tus=document.getElementById("tus");
             const girdi=document.getElementById("girdi");
@@ -90,6 +90,7 @@
                 const yenile=document.createElement("input");
                 yenile.setAttribute("type","submit");
                 yenile.setAttribute("onclick","yenile();");
+                yenile.setAttribute("value","refresh");
                 di.appendChild(yenile);
             }
             var after="";
