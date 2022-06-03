@@ -48,6 +48,7 @@
                 }
                 return binary;
             }
+            var yazi
             function bas(){
                 yaz.parentNode.removeChild(yaz);
                 boy16.parentNode.removeChild(boy16)
@@ -55,6 +56,9 @@
                 boy4.parentNode.removeChild(boy4)
                 deger=girdi.value;
                 var p=0
+                yazi=document.createElement("h3");
+                yazi.innerHTML="Istediginiz biti değiştiriniz";
+                di.appendChild(yazi);
                 for(var w=0;w<=Math.log2(uzunluk);w++){
                     array[Math.pow(2,w)-1]= -1
                 }
@@ -99,6 +103,7 @@
             }
             var after="";
             function yenile(){
+                yazi.parentNode.removeChild(yazi);
                 for(var f=dizi.length-1;f>=0;f--){
                     after=after+dizi[f].value.toString()
                     if(dizi[f].value==1){
@@ -118,6 +123,9 @@
                     }
                 }
                 console.log("hata adresi"+xor(encoded).toString(2))
+                var yazson=document.createElement("h3");
+                yazson.innerHTML="Degistirdiginiz bitin adresi: ";
+                di.appendChild(yazson);
                 var fin=document.createElement("h1")
                 fin.innerHTML=xor(encoded).toString(2)
                 di.appendChild(fin)
