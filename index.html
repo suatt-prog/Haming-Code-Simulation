@@ -8,13 +8,14 @@
         <input id="boyut8" type="submit" value="length of 8" onclick="uzunluk=8">
         <input id="boyut16" type="submit" value="length of 16" onclick="uzunluk=16">
         <br/>
-        Yukarıdan istediğiniz bit uzunluğunu seçiniz ve aşağıya veri bitlerini giriniz.
+        <h3 id="yaz">Yukarıdan istediğiniz bit uzunluğunu seçiniz ve aşağıya veri bitlerini giriniz.</h3>
         <br/>
         <br/>
         <input type="text" id="girdi">
         <input type="submit" id="tus" onclick="bas();" value="save">
         <script>
             const tus=document.getElementById("tus");
+            const yaz=document.getElementById("yaz");
             const girdi=document.getElementById("girdi");
             const di=document.getElementById("di");
             const boy4=document.getElementById("boyut4");
@@ -48,6 +49,7 @@
                 return binary;
             }
             function bas(){
+                yaz.parentNode.removeChild(yaz);
                 boy16.parentNode.removeChild(boy16)
                 boy8.parentNode.removeChild(boy8)
                 boy4.parentNode.removeChild(boy4)
